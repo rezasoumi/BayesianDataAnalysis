@@ -73,7 +73,7 @@ The project investigates the time it takes for professional tennis players to re
 2. **How to Run**:
    - Clone the repository:
      ```bash
-     git clone https://github.com/<username>/<repository>.git
+     git clone https://github.com/rezasoumi/BayesianDataAnalysis.git
      ```
    - Run preprocessing and modeling script from the top of the code
      ```
