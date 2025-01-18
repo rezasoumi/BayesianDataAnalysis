@@ -37,30 +37,21 @@ The project investigates the time it takes for professional tennis players to re
 ### Statistical Models
 1. **Gamma Model**:
    - Designed for skewed, positive data like time-to-event.
-   - Formula: 
-     \[
-     y_i \sim \text{Gamma}(\lambda_i, \theta), \quad 
-     \log(\lambda_i \theta) = \alpha + u_{\text{region}[i]} + u_{\text{country}[i]}
-     \]
+ 
 2. **Gaussian Model**:
    - Symmetric model assuming normally distributed data.
-   - Formula:
-     \[
-     y_i \sim \mathcal{N}(\mu_i, \sigma), \quad 
-     \mu_i = \alpha + u_{\text{region}[i]} + u_{\text{country}[i]}
-     \]
 
 ### Priors
 - Weakly informative priors were selected to ensure stable convergence:
-  - Gamma model intercept: \( \text{Normal}(7, 1) \) (log-scale).
-  - Gaussian model intercept: \( \text{Normal}(1000, 350) \).
+  - Gamma model intercept: log-scale.
+  - Gaussian model intercept.
 
 ---
 
 ## Results 📈
 
 1. **Model Performance**:
-   - Gamma model: Better generalization with \( \text{elpd\_loo} = -1543.9 \).
+   - Gamma model: Better generalization with elpd_loo= -1543.9.
    - Gaussian model: Higher sampling efficiency but less reliable predictions.
 
 2. **Posterior Predictive Checks**:
